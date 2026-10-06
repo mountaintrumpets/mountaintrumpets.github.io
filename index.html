@@ -1,641 +1,849 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
 
-<meta name="description" content="Mountain Trumpets Singing Ministry — a Christian vocal singing ministry from Papua New Guinea, founded in May 2025 by five brothers.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mountain Trumpets Singing Ministry</title>
+  <title>Mountain Trumpets Singing Ministry</title>
 
-<style>
-* {
-    box-sizing: border-box;
-}
+  <meta name="description" content="Mountain Trumpets Singing Ministry is a Christian vocal singing ministry from Papua New Guinea, dedicated to worship, evangelism and encouragement through the human voice.">
 
-html {
-    scroll-behavior: smooth;
-}
+  <meta name="keywords" content="Mountain Trumpets Singing Ministry, Christian singing ministry, Papua New Guinea, vocal singing, worship, evangelism">
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.7;
-    color: #222;
-    background: #f5f7fa;
-}
+  <meta name="author" content="Mountain Trumpets Singing Ministry">
 
-.hero {
-    background: linear-gradient(135deg, #12283d, #38647e);
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-}
+  <meta property="og:title" content="Mountain Trumpets Singing Ministry">
+  <meta property="og:description" content="Worship, evangelism and encouragement through vocal singing.">
+  <meta property="og:type" content="website">
 
-.hero-symbol {
-    font-size: 60px;
-}
-
-.hero h1 {
-    font-size: clamp(2.2rem, 8vw, 4.5rem);
-    margin: 15px 0;
-}
-
-.hero p {
-    max-width: 800px;
-    margin: auto;
-    font-size: 1.2rem;
-}
-
-.button {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 13px 25px;
-    border-radius: 30px;
-    background: white;
-    color: #17324d;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: white;
-    box-shadow: 0 2px 10px #0002;
-    text-align: center;
-    padding: 12px;
-}
-
-nav a {
-    display: inline-block;
-    margin: 4px 7px;
-    padding: 6px;
-    color: #17324d;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 60px 20px;
-}
-
-h2 {
-    text-align: center;
-    color: #17324d;
-    font-size: 2.2rem;
-    margin-bottom: 30px;
-}
-
-.card {
-    background: white;
-    padding: 30px;
-    margin: 20px 0;
-    border-radius: 18px;
-    box-shadow: 0 5px 20px #0001;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
-}
-
-.grid .card {
-    text-align: center;
-}
-
-.icon {
-    font-size: 40px;
-}
-
-.founder {
-    text-align: center;
-}
-
-.founder h3 {
-    color: #17324d;
-    margin-bottom: 5px;
-}
-
-.founder p {
-    margin-top: 0;
-}
-
-.timeline {
-    border-left: 4px solid #315b75;
-    margin: 20px auto;
-    max-width: 850px;
-    padding-left: 25px;
-}
-
-.timeline-item {
-    background: white;
-    margin-bottom: 22px;
-    padding: 22px;
-    border-radius: 14px;
-    box-shadow: 0 4px 15px #0001;
-}
-
-.timeline-item h3 {
-    color: #17324d;
-    margin-top: 0;
-}
-
-.highlight {
-    background: #17324d;
-    color: white;
-    border-radius: 20px;
-    padding: 35px;
-    text-align: center;
-}
-
-.highlight h2 {
-    color: white;
-}
-
-footer {
-    background: #12283d;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-@media (max-width: 600px) {
-    .hero {
-        padding: 60px 15px;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
-    .hero h1 {
-        font-size: 2.3rem;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: #222;
+      background: #f5f7fa;
     }
 
-    section {
-        padding: 45px 15px;
+    /* HEADER */
+    header {
+      background: #071a3d;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #d9a928;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
     }
 
     nav a {
-        font-size: 14px;
-        margin: 2px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
     }
-}
-</style>
+
+    nav a:hover {
+      color: #d9a928;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+      background:
+        linear-gradient(rgba(5,20,50,0.82), rgba(5,20,50,0.82)),
+        linear-gradient(135deg, #123c69, #071a3d);
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 72px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .hero h1 span {
+      color: #d9a928;
+    }
+
+    .hero p {
+      font-size: 21px;
+      max-width: 750px;
+      margin: 0 auto 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #d9a928;
+      color: #071a3d;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 7px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: white;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    /* GENERAL */
+    section {
+      padding: 80px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      color: #071a3d;
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    /* ABOUT */
+    .about {
+      background: white;
+    }
+
+    .about-text {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 35px 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+      border-top: 4px solid #d9a928;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+    }
+
+    .card-icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #071a3d;
+      margin-bottom: 12px;
+    }
+
+    /* HISTORY */
+    .history {
+      background: #eef2f7;
+    }
+
+    .timeline {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .timeline-item {
+      background: white;
+      margin-bottom: 20px;
+      padding: 25px;
+      border-left: 5px solid #d9a928;
+      border-radius: 8px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    }
+
+    .timeline-item h3 {
+      color: #071a3d;
+      margin-bottom: 5px;
+    }
+
+    .date {
+      font-weight: bold;
+      color: #b48716;
+      margin-bottom: 8px;
+    }
+
+    /* FOUNDERS */
+    .founders {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+    }
+
+    .founder {
+      background: white;
+      padding: 25px 10px;
+      text-align: center;
+      border-radius: 12px;
+      font-weight: bold;
+      color: #071a3d;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    }
+
+    /* IDENTITY */
+    .identity {
+      background: #071a3d;
+      color: white;
+    }
+
+    .identity .section-title h2,
+    .identity .section-title p {
+      color: white;
+    }
+
+    .identity-box {
+      max-width: 900px;
+      margin: auto;
+      background: rgba(255,255,255,0.08);
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .identity-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 18px 25px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .identity-row:last-child {
+      border-bottom: none;
+    }
+
+    .identity-row strong {
+      color: #d9a928;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: white;
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 750px;
+      margin: auto;
+      background: #f5f7fa;
+      padding: 40px;
+      border-radius: 15px;
+    }
+
+    .contact-box h3 {
+      color: #071a3d;
+      margin-bottom: 15px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #041027;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    footer strong {
+      color: #d9a928;
+    }
+
+    footer p {
+      margin: 8px 0;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .hero {
+        min-height: 75vh;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .founders {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .identity-row {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+
+    @media (max-width: 450px) {
+
+      .founders {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="hero" id="home">
+  <!-- HEADER -->
+  <header>
+    <div class="navbar">
 
-    <div class="hero-symbol">⛰️ 🎤</div>
+      <div class="logo">
+        MOUNTAIN <span>TRUMPETS</span>
+      </div>
 
-    <h1>
-        Mountain Trumpets<br>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#history">History</a></li>
+          <li><a href="#founders">Founders</a></li>
+          <li><a href="#identity">Identity</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HOME -->
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <h1>
+        Mountain <span>Trumpets</span>
         Singing Ministry
-    </h1>
+      </h1>
 
-    <p>
-        Using our voices to glorify God,
-        share the Gospel and encourage people
-        through Christian singing.
-    </p>
+      <p>
+        Using our voices to worship God, share Christian messages,
+        encourage others and proclaim hope.
+      </p>
 
-    <a href="#history" class="button">
-        Discover Our Story
-    </a>
+      <a href="#about" class="btn">Discover Our Ministry</a>
 
-</header>
-
-<nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#history">Our Story</a>
-    <a href="#founders">Founders</a>
-    <a href="#ministry">Ministry</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section id="about">
-
-    <h2>About Mountain Trumpets</h2>
-
-    <div class="card">
-
-        <p>
-            <strong>Mountain Trumpets Singing Ministry</strong>
-            is a Christian vocal singing ministry from
-            Papua New Guinea.
-        </p>
-
-        <p>
-            The ministry began as a small group of five
-            brothers who shared a desire to sing and serve God.
-            From those humble beginnings, the ministry has
-            continued to participate in Christian programs,
-            worship gatherings, Sabbath School programs
-            and evangelistic meetings.
-        </p>
-
-        <p>
-            Our ministry uses the human voice to sing.
-            <strong>
-                We do not use musical instruments.
-            </strong>
-        </p>
+      <a href="#contact" class="btn btn-outline">Contact Us</a>
 
     </div>
 
-</section>
+  </section>
 
-<section id="history">
 
-    <h2>How Mountain Trumpets Came to Be</h2>
+  <!-- ABOUT -->
+  <section class="about" id="about">
 
-    <div class="card">
+    <div class="container">
 
-        <p>
-            The story of Mountain Trumpets began on a
-            Friday evening around <strong>9 May 2025</strong>.
-        </p>
+      <div class="section-title">
+        <h2>About Us</h2>
+        <p>Who we are and what we represent</p>
+      </div>
 
-        <p>
-            The five brothers gathered together and practiced
-            and learned a new song in the living room of
-            <strong>Kittinger Pakau's</strong> house.
-        </p>
+      <div class="about-text">
 
         <p>
-            This small beginning became the foundation
-            of what would later become
-            <strong>Mountain Trumpets Singing Ministry.</strong>
+          <strong>Mountain Trumpets Singing Ministry</strong>
+          is a Christian vocal singing ministry from Papua New Guinea.
+          The ministry was established to use the gift of the human voice
+          to worship God, share Christian messages and encourage people.
         </p>
 
+        <br>
+
         <p>
-            The idea of starting the ministry came from
-            <strong>Kittinger Pakau</strong>.
+          We do not use musical instruments. Our singing ministry is
+          centered on our voices and our desire to serve God and others
+          through vocal presentations.
         </p>
+
+      </div>
 
     </div>
 
-    <div class="highlight">
+  </section>
 
-        <h2>From Five Brothers to a Ministry</h2>
+
+  <!-- MISSION -->
+  <section id="mission">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Our Ministry</h2>
 
         <p>
-            What began with five brothers singing together
-            became a ministry dedicated to using voices
-            to share the Christian message.
+          Three important areas of our service
         </p>
 
-    </div>
+      </div>
 
-</section>
 
-<section id="founders">
-
-    <h2>The Five Founding Brothers</h2>
-
-    <div class="grid">
-
-        <div class="card founder">
-            <div class="icon">👤</div>
-            <h3>Kittinger Pakau</h3>
-            <p>
-                The brother who had the idea of starting
-                the ministry.
-            </p>
-        </div>
-
-        <div class="card founder">
-            <div class="icon">👤</div>
-            <h3>Manu Pakau</h3>
-            <p>
-                One of the five founding brothers.
-            </p>
-        </div>
-
-        <div class="card founder">
-            <div class="icon">👤</div>
-            <h3>Andrian Pakau</h3>
-            <p>
-                One of the five founding brothers.
-            </p>
-        </div>
-
-        <div class="card founder">
-            <div class="icon">👤</div>
-            <h3>Newton Pakau</h3>
-            <p>
-                One of the five founding brothers.
-            </p>
-        </div>
-
-        <div class="card founder">
-            <div class="icon">👤</div>
-            <h3>Searson Yanda</h3>
-            <p>
-                One of the five founding brothers.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-<section>
-
-    <h2>Our Journey</h2>
-
-    <div class="timeline">
-
-        <div class="timeline-item">
-
-            <h3>9 May 2025 — The Beginning</h3>
-
-            <p>
-                The singing group began on a Friday evening.
-                The five brothers gathered in the living room
-                and practiced and learned a new song.
-            </p>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <h3>10 May 2025 — First Song</h3>
-
-            <p>
-                The group presented its first song on the
-                following Sabbath.
-            </p>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <h3>June 2025 — The Name Mountain Trumpets</h3>
-
-            <p>
-                The group received the name
-                <strong>Mountain Trumpets</strong>.
-                The name was chosen because the members
-                came from the mountains.
-            </p>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <h3>28 June 2025 — Sangurap</h3>
-
-            <p>
-                Mountain Trumpets went to
-                <strong>Sangurap</strong> to sing.
-            </p>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <h3>26 July 2025 — Lemandi Branch Church</h3>
-
-            <p>
-                The group participated in its first
-                Sabbath School program at
-                <strong>Lemandi Branch Church</strong>.
-            </p>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <h3>July 2025 — Pelea (Sanga) Branch Church</h3>
-
-            <p>
-                The group also participated in a Sabbath
-                School program at
-                <strong>Pelea (Sanga) Branch Church</strong>.
-            </p>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <h3>November 2025 — First Uniforms</h3>
-
-            <p>
-                Mountain Trumpets received its first
-                uniforms. The history notes record
-                nine members at that time.
-            </p>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <h3>31 January 2026 — Evangelistic Meeting</h3>
-
-            <p>
-                The history notes record Mountain Trumpets
-                singing at an evangelistic meeting at
-                <strong>Sangurap</strong>.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="ministry">
-
-    <h2>Our Ministry</h2>
-
-    <div class="grid">
+      <div class="cards">
 
         <div class="card">
 
-            <div class="icon">🎤</div>
+          <div class="card-icon">🎤</div>
 
-            <h3>Vocal Singing</h3>
+          <h3>Evangelism</h3>
 
-            <p>
-                Our main ministry is singing with our
-                voices to glorify God.
-            </p>
+          <p>
+            Sharing Christian messages and the hope of God
+            through vocal singing.
+          </p>
 
         </div>
+
 
         <div class="card">
 
-            <div class="icon">✝️</div>
+          <div class="card-icon">🙏</div>
 
-            <h3>Gospel Ministry</h3>
+          <h3>Worship</h3>
 
-            <p>
-                We seek to use Christian singing to
-                share the Gospel and encourage people.
-            </p>
+          <p>
+            Serving churches and gatherings through meaningful
+            vocal presentations that honor God.
+          </p>
 
         </div>
+
 
         <div class="card">
 
-            <div class="icon">🙏</div>
+          <div class="card-icon">🤝</div>
 
-            <h3>Worship</h3>
+          <h3>Community</h3>
 
-            <p>
-                We participate in Christian gatherings
-                through vocal worship.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <div class="icon">🌍</div>
-
-            <h3>Evangelism</h3>
-
-            <p>
-                We participate in evangelistic activities
-                and Christian programs.
-            </p>
+          <p>
+            Building fellowship and encouraging young people
+            to use their gifts in service to God.
+          </p>
 
         </div>
 
-    </div>
-
-</section>
-
-<section>
-
-    <h2>Our Identity</h2>
-
-    <div class="card">
-
-        <p>
-            <strong>Official Name:</strong><br>
-            Mountain Trumpets Singing Ministry
-        </p>
-
-        <p>
-            <strong>Founded:</strong><br>
-            9 May 2025
-        </p>
-
-        <p>
-            <strong>Founder / Initiator:</strong><br>
-            Kittinger Pakau
-        </p>
-
-        <p>
-            <strong>Founding Brothers:</strong><br>
-            Kittinger Pakau, Manu Pakau, Andrian Pakau,
-            Newton Pakau and Searson Pakau
-        </p>
-
-        <p>
-            <strong>Type:</strong><br>
-            Christian vocal singing ministry
-        </p>
-
-        <p>
-            <strong>Country:</strong><br>
-            Papua New Guinea
-        </p>
-
-        <p>
-            <strong>Musical Instruments:</strong><br>
-            None — the ministry uses voices to sing.
-        </p>
+      </div>
 
     </div>
 
-</section>
+  </section>
 
-<section>
 
-    <div class="highlight">
+  <!-- HISTORY -->
+  <section class="history" id="history">
 
-        <h2>Our Purpose</h2>
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Our History</h2>
 
         <p>
-            To use our voices in Christian singing,
-            glorify God, encourage believers and
-            share the Gospel with others.
+          Important moments in the journey of Mountain Trumpets
         </p>
+
+      </div>
+
+
+      <div class="timeline">
+
+
+        <div class="timeline-item">
+
+          <div class="date">9 May 2025</div>
+
+          <h3>The Beginning</h3>
+
+          <p>
+            The group began on a Friday evening.
+            The first members practiced together in
+            Kittinger Pakau's house living room.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="date">10 May 2025</div>
+
+          <h3>First Song</h3>
+
+          <p>
+            The first song was presented on Sabbath,
+            marking an important beginning for the group.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="date">June 2025</div>
+
+          <h3>The Name</h3>
+
+          <p>
+            The group received the name
+            <strong>Mountain Trumpets</strong>,
+            reflecting where the members came from.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="date">28 June 2025</div>
+
+          <h3>Sangurap</h3>
+
+          <p>
+            The group travelled to Sangurap to sing.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="date">26 July 2025</div>
+
+          <h3>Lemandi Branch Church</h3>
+
+          <p>
+            Mountain Trumpets participated in the
+            Sabbath School program.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="date">July 2025</div>
+
+          <h3>Pelea (Sanga) Branch Church</h3>
+
+          <p>
+            The group participated in the
+            Sabbath School program.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="date">November 2025</div>
+
+          <h3>First Uniforms</h3>
+
+          <p>
+            As the group grew to nine members,
+            Mountain Trumpets received its first uniforms.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="date">31 January 2026</div>
+
+          <h3>Sangurap Evangelistic Meeting</h3>
+
+          <p>
+            Mountain Trumpets sang at an evangelistic meeting
+            in Sangurap.
+          </p>
+
+        </div>
+
+
+      </div>
 
     </div>
 
-</section>
+  </section>
 
-<section id="contact">
 
-    <h2>Contact Mountain Trumpets</h2>
+  <!-- FOUNDERS -->
+  <section id="founders">
 
-    <div class="card">
+    <div class="container">
 
-        <p>
-            For invitations, Christian programs,
-            singing events and other ministry enquiries,
-            please contact the Mountain Trumpets
-            Singing Ministry team.
-        </p>
+      <div class="section-title">
+
+        <h2>Founding Brothers</h2>
 
         <p>
-            <strong>Country:</strong>
-            Papua New Guinea
+          The brothers who began the ministry journey
         </p>
 
-        <p>
-            <strong>Email:</strong>
-            Official email coming soon.
-        </p>
+      </div>
 
-        <p>
-            <strong>YouTube:</strong>
-            Official channel coming soon.
-        </p>
 
-        <p>
-            <strong>Social Media:</strong>
-            Official social-media pages coming soon.
-        </p>
+      <div class="founders">
+
+        <div class="founder">
+          Kittinger Pakau
+        </div>
+
+        <div class="founder">
+          Manu Pakau
+        </div>
+
+        <div class="founder">
+          Andrian Pakau
+        </div>
+
+        <div class="founder">
+          Newton Pakau
+        </div>
+
+        <div class="founder">
+          Searson Yanda
+        </div>
+
+      </div>
 
     </div>
 
-</section>
+  </section>
 
-<footer>
+
+  <!-- IDENTITY -->
+  <section class="identity" id="identity">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Our Identity</h2>
+
+        <p>
+          Official information about the ministry
+        </p>
+
+      </div>
+
+
+      <div class="identity-box">
+
+        <div class="identity-row">
+          <strong>Official Name</strong>
+          <span>Mountain Trumpets Singing Ministry</span>
+        </div>
+
+        <div class="identity-row">
+          <strong>Founded</strong>
+          <span>9 May 2025</span>
+        </div>
+
+        <div class="identity-row">
+          <strong>Founder / Initiator</strong>
+          <span>Kittinger Pakau</span>
+        </div>
+
+        <div class="identity-row">
+          <strong>Founding Brothers</strong>
+          <span>
+            Kittinger, Manu, Andrian, Newton and Searson Yanda
+          </span>
+        </div>
+
+        <div class="identity-row">
+          <strong>Type</strong>
+          <span>Christian Vocal Singing Ministry</span>
+        </div>
+
+        <div class="identity-row">
+          <strong>Country</strong>
+          <span>Papua New Guinea</span>
+        </div>
+
+        <div class="identity-row">
+          <strong>Musical Instruments</strong>
+          <span>None — we use our voices to sing.</span>
+        </div>
+
+        <div class="identity-row">
+          <strong>Purpose</strong>
+          <span>Worship, evangelism and encouragement</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Contact Us</h2>
+
+        <p>
+          Connect with Mountain Trumpets Singing Ministry
+        </p>
+
+      </div>
+
+
+      <div class="contact-box">
+
+        <h3>Mountain Trumpets Singing Ministry</h3>
+
+        <p>
+          Papua New Guinea
+        </p>
+
+        <p>
+          Our official website:
+        </p>
+
+        <p>
+          <strong>mountaintrumpets.github.io</strong>
+        </p>
+
+        <br>
+
+        <p>
+          More contact and social media information
+          can be added here as the ministry grows.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
 
     <p>
-        <strong>
-            Mountain Trumpets Singing Ministry
-        </strong>
+      <strong>Mountain Trumpets Singing Ministry</strong>
     </p>
 
     <p>
-        Founded in 2025 by five brothers.
+      Using our voices to worship, evangelize and encourage.
     </p>
 
     <p>
-        Using our voices to glorify God
-        and share the Gospel.
+      © 2025–2026 Mountain Trumpets Singing Ministry.
+      All rights reserved.
     </p>
 
-    <p>
-        Papua New Guinea
-    </p>
+  </footer>
 
-    <p>
-        © 2026 Mountain Trumpets Singing Ministry
-    </p>
-
-</footer>
 
 </body>
 </html>
